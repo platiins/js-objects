@@ -31,10 +31,18 @@ const car = {
     average speed: ${this.averageSpeed};`);
   },
   timeToCoverDistance() {
-    let time = distanceToCover / carAverageSpeed;
+    let timeWithoutBreaks = distanceToCover / carAverageSpeed;
+    let breaksAmount = parseInt(timeWithoutBreaks / 4);
+    let totalTime;
+
+    if (breaksAmount === 0) {
+      totalTime = timeWithoutBreaks;
+    } else {
+      totalTime = breaksAmount * 1 + timeWithoutBreaks;
+    }
 
     return console.log(
-      `you need ${time} hours to cover ${distanceToCover} km by this car`
+      `you need ${totalTime} hours to cover ${distanceToCover} km by this car`
     );
   },
 };
