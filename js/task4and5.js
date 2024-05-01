@@ -1,4 +1,5 @@
 /* 
+TASK 4:
 Create 5 dogs - John, Ivan, Teddy, Rocco and Sparky. 
 All of them should have unique ids, ages and addresses.
 Show which is the oldest and which is the youngest.
@@ -58,3 +59,11 @@ allDogs.forEach((dog) => {
 
 console.log(`Oldest dog: ${oldestDog.name}, id:${oldestDog[id]}`);
 console.log(`Youngest dog: ${youngestDog.name}, id:${youngestDog[id]}`);
+
+/* 
+TASK 5:
+Use the previous objects and show a list with their names and ages.
+*/
+
+console.warn("DATABASE:");
+console.table(allDogs, ["name", "age"]);
